@@ -4,29 +4,28 @@
 
 int main(){
 
-    char name[100], *description;
-    strcpy(name, "John Doe");
+    int n;
 
-    description = malloc(30 * sizeof(char));
+    printf("Please enter the amount of integers to sum up: ");
+    scanf("%d",&n);
 
-    if(description == NULL){
-        fprintf(stderr, "Error - memory allocation failed");
-    } else {
-        strcpy(description, "This is description");
+    int *pn = (int *)calloc(n, sizeof(int));
+
+    printf("Please enter the individual integer to sum up: \n");
+
+    for (int i=0; i<n; i++){
+        scanf("%d",pn+i);
+        printf("+");
     }
 
-    description = realloc(description, 100 * sizeof(char));
+    int ans = 0;
 
-    if(description == NULL){
-        fprintf(stderr, "Error -memory allocation failed 2");
-    }
-    else{
-        strcat(description, "This is description 2");
+    for (int i=0; i<n; i++){
+        ans += *(pn+i);
     }
 
-    printf("Name: %s\n", description);
-    printf("Description: %s\n", description);
+    printf("the sum of the integers is: %d\n", ans);
 
-    free(description);
+    free(pn);
 
 return 0;}
