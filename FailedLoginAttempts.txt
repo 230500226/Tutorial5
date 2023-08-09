@@ -1,0 +1,9 @@
+bob, bopbo
+bob, bob
+bob, bob
+bob, bobo
+bobo, obob
+obob, obo
+Attempt 1: Username: bob#, Password: bob
+Attempt 2: Username: bob, Password: bob
+Attempt 3: Username: bob, Password: bob
